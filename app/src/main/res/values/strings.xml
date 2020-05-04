@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Primera App Android</string>
+    <string name="nombre">Saúl Enrique Melchor Ramírez</string>
+    <string name="saludo">Me llamo</string>
+    <string name="enviar">Enviar</string>
+    <string name="no_nombre">Por favor ingrese un nombre</string>
+</resources>
