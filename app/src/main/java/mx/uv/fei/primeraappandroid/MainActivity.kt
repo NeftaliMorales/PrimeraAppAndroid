@@ -2,15 +2,20 @@ package mx.uv.fei.primeraappandroid
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import com.squareup.picasso.Picasso
 import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.longToast
 import org.jetbrains.anko.toast
 import org.jetbrains.anko.uiThread
+import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,19 +39,14 @@ class MainActivity : AppCompatActivity() {
             tvResultado.text = saludoCompleto;
             tvResultado.visibility = View.VISIBLE;
 
-            var ivImagen = findViewById<ImageView>(R.id.imagen);
+            var ivImagen = findViewById<ImageView>(R.id.imagenDinamicaDesdeDrawable);
+            ivImagen.setImageResource(R.drawable.play);
 
-            ivImagen.setImageDrawable(resources.getDrawable(R.drawable.play));
+            var ivImagenDesdeUrl = findViewById<ImageView>(R.id.imagenDinamicaUrl);
+
+            Picasso.get().load("https://maxcdn.icons8.com/Share/icon/Media_Controls/play1600.png").into(ivImagenDesdeUrl);
+
         }
     }
 
-    fun obtenerImagen(url: String): Bitmap {
-        var bitmap: Bitmap;
-        var imagen = khttp.get(
-            url = url,
-            stream = true
-        );
-        bitmap = BitmapFactory.decodeStream(imagen.raw);
-        return bitmap;
-    }
 }

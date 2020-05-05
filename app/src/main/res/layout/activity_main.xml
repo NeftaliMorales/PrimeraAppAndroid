@@ -45,8 +45,39 @@
         android:visibility="gone"
         />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Imagen cargada estáticamente"
+        />
+
     <ImageView
-        android:id="@+id/imagen"
+        android:id="@+id/imagenEstatica"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/play"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Imagen cargada desde el drawable"
+        />
+
+    <ImageView
+        android:id="@+id/imagenDinamicaDesdeDrawable"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Imagen cargada desde url"
+        />
+
+    <ImageView
+        android:id="@+id/imagenDinamicaUrl"
         android:layout_width="50dp"
         android:layout_height="50dp"
         />
