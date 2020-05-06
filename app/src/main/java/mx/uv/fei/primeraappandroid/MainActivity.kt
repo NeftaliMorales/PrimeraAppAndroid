@@ -1,5 +1,6 @@
 package mx.uv.fei.primeraappandroid
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.media.Image
@@ -9,6 +10,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import com.squareup.picasso.Picasso
 import org.jetbrains.anko.doAsync
@@ -22,6 +24,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var barraProgreso = findViewById<ProgressBar>(R.id.progreso)
+        barraProgreso.progress = 75
     }
 
     fun clickBtnEnviar(view: View?) {
@@ -43,10 +48,14 @@ class MainActivity : AppCompatActivity() {
             ivImagen.setImageResource(R.drawable.play);
 
             var ivImagenDesdeUrl = findViewById<ImageView>(R.id.imagenDinamicaUrl);
-
             Picasso.get().load("https://maxcdn.icons8.com/Share/icon/Media_Controls/play1600.png").into(ivImagenDesdeUrl);
-
         }
+    }
+
+
+    fun clickIrALista(view: View?) {
+        val intent = Intent(this, EjemploListViewActivity::class.java)
+        startActivity(intent)
     }
 
 }
