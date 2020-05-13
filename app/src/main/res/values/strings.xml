@@ -4,4 +4,5 @@
     <string name="saludo">Me llamo</string>
     <string name="enviar">Enviar</string>
     <string name="no_nombre">Por favor ingrese un nombre</string>
+    <string name="publicaciones_recientes">Publicaciones recientes</string>
 </resources>

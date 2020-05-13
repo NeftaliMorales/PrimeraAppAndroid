@@ -55,6 +55,8 @@ class MainActivity : AppCompatActivity() {
 
     fun clickIrALista(view: View?) {
         val intent = Intent(this, EjemploListViewActivity::class.java)
+        intent.putExtra("nombre", "XD")
+        intent.putExtra("edad", 23)
         startActivity(intent)
     }
 

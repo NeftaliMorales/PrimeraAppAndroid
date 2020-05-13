@@ -2,10 +2,7 @@ package mx.uv.fei.primeraappandroid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import org.w3c.dom.Text
 import java.text.DateFormatSymbols
 
@@ -21,8 +18,9 @@ class DemostracionListViewActivity : AppCompatActivity() {
         meses = DateFormatSymbols().months
         var adaptadorMeses = ArrayAdapter(this, android.R.layout.simple_list_item_1, meses)
         lvMeses.adapter = adaptadorMeses
+
         lvMeses.setOnItemClickListener { parent, view, position, id ->
-            val toastPadre = Toast.makeText(applicationContext, "Padre: " + parent.toString(), Toast.LENGTH_LONG)
+            /*val toastPadre = Toast.makeText(applicationContext, "Padre: " + parent.toString(), Toast.LENGTH_LONG)
             toastPadre.show()
 
             val toastVista = Toast.makeText(applicationContext, "Vista: " + view.toString(), Toast.LENGTH_LONG)
@@ -40,7 +38,7 @@ class DemostracionListViewActivity : AppCompatActivity() {
 
             val vista = view as TextView
             val toastMesView = Toast.makeText(applicationContext, "Mes presionado desde vista: " + vista.text, Toast.LENGTH_LONG)
-            toastMesView.show()
+            toastMesView.show()*/
         }
     }
 }

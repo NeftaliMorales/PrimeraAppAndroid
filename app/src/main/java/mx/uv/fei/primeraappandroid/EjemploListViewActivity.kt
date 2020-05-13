@@ -15,6 +15,9 @@ class EjemploListViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ejemplo_list_view)
 
+        var nombre = intent.getStringExtra("nombre")
+        var edad = intent.getIntExtra("edad", 0)
+
         lvMeses = findViewById(R.id.lvMeses)
         meses = DateFormatSymbols().months
 
